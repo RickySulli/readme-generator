@@ -34,7 +34,7 @@ ${data.licenseBadge}
 ##### ${data.tests}
 
 # Contact 
-### Github: ${data.ghUser}
+### Github: [${data.ghUser}](http://github.com/${data.ghUser})
 ### Email: ${data.Email}
   `;
   }
