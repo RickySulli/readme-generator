@@ -1,9 +1,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./util/generate-markdown');
+const { info } = require('console');
 
 // License function and  if/else section here 
-let getLicense = param => {   
+let getBadge = param => {   
      if (param === "GNU LGPLv3") {
         return "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
     }  else if (param === "GNU AGPLv3") {
@@ -21,7 +22,7 @@ let getLicense = param => {
     }  else {
         return "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
     }
-}
+};
 //make functions for validate to eliminate repetative if statements
 let validateInput = value =>{
     if (value != "") {
@@ -51,11 +52,11 @@ const questions = [
         message: 'Provide a description for your project! (REQUIRED)',
         validate: validateInput
     },
-    // {
-    //     type: 'input',
-    //     name: 'Table of Contents',
-    //     message: 'What secitons for your table of contents(OPTIONAL)'
-    // },
+    {
+        type: 'input',
+        name: 'Table of Contents',
+        message: 'What secitons for your table of contents(OPTIONAL)'
+    },
     {
         type: 'input',
         name: 'installation',
@@ -84,6 +85,7 @@ const questions = [
         ],
         validate: validateInput,
         
+        
     },
     {
         type: 'input',
@@ -111,10 +113,7 @@ const questions = [
 
 
 ];
-
-// function to write README file
 function writeToFile(fileName, data) {
-    
     fs.writeFile(fileName, generateMarkdown(data), (err) => {
         if (err){
             return console.log(err);
@@ -129,6 +128,9 @@ const init = () => inquirer.prompt(questions)
 
 // function call to initialize program
 init()
-    .then((data) => writeToFile("./dist/README.md", data))
+    .then((data) => {
+        data.licenseBadge = getBadge(data.license) 
+        writeToFile("./dist/README.md", data)})
     .then(() => console.log("CREATED!!"))
     .catch((err)=> console.log(err));
+

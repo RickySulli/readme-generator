@@ -3,7 +3,7 @@ function generateMarkdown(data) {
     return `
     # Project Title
     ${data.title}
-    ${data.getLicense}
+    ${data.licenseBadge}
 
     # Description
     ${data.description}
