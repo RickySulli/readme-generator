@@ -2,38 +2,40 @@
 function generateMarkdown(data) {
     return `
     # Project Title
-    ${data.title}
+    ## ${data.title}
+
+
     ${data.licenseBadge}
 
     # Description
-    ${data.description}
+    ## ${data.description}
 
-    #Table of Contents
+    ## Table of Contents
     * [Installation](#installation)
     * [Usage](#usage)
-    * [License](#installation)
+    * [License](#license)
     * [Contributing](#contributing)
     * [Tests](#tests)
     * Questions(#contactInformation)
 
-    # installation
-    ${data.installation}
+    # Installation
+    ## ${data.installation}
     
-    # usage
-    ${data.usage}
+    # Usage
+    ## ${data.usage}
 
-    # license
-    ${data.license}
+    # License
+    ## ${data.license}
 
-    # contribution
-    ${data.contribution}
+    # Contribution
+    ## ${data.contribution}
 
-    # tests
-    ${data.tests}
+    # Tests
+    ## ${data.tests}
 
-    # contactInformation
-    Github: ${data.ghUser}
-    Email: ${data.Email}
+    # Contact Information
+    ## Github: ${data.ghUser}
+    ## Email: ${data.Email}
   `;
   }
   
