@@ -1,12 +1,12 @@
 
 # Project Title
-### lkajsdjasljasg
+### README Generator
 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 # Description
-#### ;ajsgd;kjgwl;lirwa]
+#### This is a project for generating a  README.md file that looks good from the command line using NODE.
 
 ## Table of Contents
 * [Installation](#Installation)
@@ -17,21 +17,21 @@
 * [Questions](#Contact)
 
 ## Installation
-#### ;lasdfjlka;ldskj;lakjg;lkwa
+#### You just need to use Node.js so make sure you have that installed
 
 ## Usage
-#### asgawgregawegewlkglkjlkhasg
+#### This can be used by anyone
 
 ## License
-#### MIT
+#### The Unlicence
 
 ## Contribution
-#### lkjasdlkagljewlgkhgewq
+#### Just ask!
 
 ### Tests
-##### lkjdsaalkjdg
+##### I haven't at present created any tests.
 
 # Contact 
-### Github: [rickysulli](http://github.com/rickysulli)
-### Email: rickyplaysdrums@gmail.com
+### Github: [rickySulli](http://github.com/rickySulli)
+### Email: dostuffforme@gmail.com
   
