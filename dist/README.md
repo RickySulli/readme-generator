@@ -1,37 +1,37 @@
 
-    # Project Title
-    ## README GENERATOR
+# Project Title
+## README Generator
 
 
-    [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
-    # Description
-    ## This produces a README.md file so one can provide adequate information to potential users.
+## Description
+#### This will generate a good looking README from the command line using NODE!
 
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * Questions(#contactInformation)
+## Table of Contents
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contribution)
+* [Tests](#Tests)
+* [Questions](#Contact)
 
-    # Installation
-    ## use NODE.js
-    
-    # Usage
-    ## to create a good looking README! 
+## Installation
+#### you will have to use NODE.js to use the prompts
 
-    # License
-    ## The Unlicence
+### Usage
+##### This can be used by anyone.
 
-    # Contribution
-    ## Reach out via Email
+### License
+##### Mozilla
 
-    # Tests
-    ## none at the moment
+### Contribution
+##### Just reach out!
 
-    # Contact Information
-    ## Github: rickySulli
-    ## Email: dostuffforme@gmail.com
+## Tests
+##### I didn't create a test.
+
+# Contact 
+## Github: rickySulli
+## Email: rickyplaysdrums@gmail.com
   
