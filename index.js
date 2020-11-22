@@ -54,11 +54,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Table of Contents',
-        message: 'What secitons for your table of contents(OPTIONAL)'
-    },
-    {
-        type: 'input',
         name: 'installation',
         message: 'Include any installation instructions(OPTIONAL)'
     },
