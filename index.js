@@ -4,7 +4,7 @@ const generateMarkdown = require('./util/generate-markdown');
 const { info } = require('console');
 
 // License function and  if/else section here 
-let getLicense = param => {   
+let getBadge = param => {   
      if (param === "GNU LGPLv3") {
         return "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
     }  else if (param === "GNU AGPLv3") {
@@ -40,34 +40,34 @@ let validateEmail = value =>{
 }
 // array of questions for user
 const questions = [
-    // {
-    //     type: 'input',
-    //     name: 'title',
-    //     message: 'What is your project title?? (REQUIRED)',
-    //     validate: validateInput
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'description',
-    //     message: 'Provide a description for your project! (REQUIRED)',
-    //     validate: validateInput
-    // },
-    // // {
-    // //     type: 'input',
-    // //     name: 'Table of Contents',
-    // //     message: 'What secitons for your table of contents(OPTIONAL)'
-    // // },
-    // {
-    //     type: 'input',
-    //     name: 'installation',
-    //     message: 'Include any installation instructions(OPTIONAL)'
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'usage',
-    //     message: 'Describe usage information for this particular project(REQUIRED)',
-    //     validate: validateInput
-    // },
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is your project title?? (REQUIRED)',
+        validate: validateInput
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Provide a description for your project! (REQUIRED)',
+        validate: validateInput
+    },
+    {
+        type: 'input',
+        name: 'Table of Contents',
+        message: 'What secitons for your table of contents(OPTIONAL)'
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Include any installation instructions(OPTIONAL)'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Describe usage information for this particular project(REQUIRED)',
+        validate: validateInput
+    },
     {
         type: 'list',
         name: 'license',
@@ -85,44 +85,34 @@ const questions = [
         ],
         validate: validateInput,
         
+        
     },
-    // {
-    //     type: 'input',
-    //     name: 'contribution',
-    //     message: 'How can other users contribute to your project?',
-    //     validate: validateInput
-    // },
-    // {   type: 'input',
-    //     name: 'tests',
-    //     message: 'Please provide any testing information.',
-    //     validate: validateInput,
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'ghUser',
-    //     message: 'What is your GitHub username?',
-    //     validate: validateInput,
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'Email',
-    //     message: "What e-mail address would you prefer potential contributors contact?",
-    //     validate:validateEmail,
-    // },
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'How can other users contribute to your project?',
+        validate: validateInput
+    },
+    {   type: 'input',
+        name: 'tests',
+        message: 'Please provide any testing information.',
+        validate: validateInput,
+    },
+    {
+        type: 'input',
+        name: 'ghUser',
+        message: 'What is your GitHub username?',
+        validate: validateInput,
+    },
+    {
+        type: 'input',
+        name: 'Email',
+        message: "What e-mail address would you prefer potential contributors contact?",
+        validate:validateEmail,
+    },
 
 
 ];
-// function to generate value for if statement
-const createGetLicense = (license, choice) => `${data.license}`
-const getLicenseInfo = (getLicense) => {
-    getLicense.info = createGetLicense(license)
-    console.log(getLicense);
-};
-
-
-
-
-// function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, generateMarkdown(data), (err) => {
         if (err){
@@ -138,6 +128,9 @@ const init = () => inquirer.prompt(questions)
 
 // function call to initialize program
 init()
-    .then((data) => writeToFile("./dist/README.md", data))
+    .then((data) => {
+        data.licenseBadge = getBadge(data.license) 
+        writeToFile("./dist/README.md", data)})
     .then(() => console.log("CREATED!!"))
     .catch((err)=> console.log(err));
+
