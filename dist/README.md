@@ -1,12 +1,12 @@
 
     # Project Title
-    ## e
+    ## README GENERATOR
 
 
-    ## [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+    [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
     # Description
-    ## e
+    ## This produces a README.md file so one can provide adequate information to potential users.
 
     ## Table of Contents
     * [Installation](#installation)
@@ -17,21 +17,21 @@
     * Questions(#contactInformation)
 
     # Installation
-    ## e
+    ## use NODE.js
     
     # Usage
-    ## e
+    ## to create a good looking README! 
 
     # License
-    ## GNU GPLv3
+    ## The Unlicence
 
     # Contribution
-    ## e
+    ## Reach out via Email
 
     # Tests
-    ## e
+    ## none at the moment
 
     # Contact Information
-    ## Github: e
-    ## Email: eee@ee
+    ## Github: rickySulli
+    ## Email: dostuffforme@gmail.com
   
